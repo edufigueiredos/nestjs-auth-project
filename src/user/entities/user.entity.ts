@@ -1,5 +1,5 @@
-export interface UserModel {
-  _id: string;
+export class UserEntity {
+  _id?: string;
   email: string;
   password: string;
   name: string;
