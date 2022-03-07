@@ -9,8 +9,7 @@ export class AuthController {
   @Post('login')
   @HttpCode(HttpStatus.OK)
   @UseGuards(LocalAuthGuard)
-  login(@Body() body: { email: string, senha: string }) {
-    // return this.authService.login(body);
-    return 'Teste'
+  login(@Body() body: { email: string, password: string }) {
+    return this.authService.validateUser(body.email, body.password);
   }
 }
